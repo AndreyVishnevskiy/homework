@@ -7,7 +7,6 @@ public class Fibonacci {
         int result = 0;
         for (int i = 1; i < n; i++) {
             result = a + b;
-//            System.out.println(a + " + " + b + " = " + result);
             b = a;
             a = result;
         }

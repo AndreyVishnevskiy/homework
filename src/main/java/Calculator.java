@@ -32,9 +32,6 @@ public class Calculator {
             case "/":
                 result = division(a, b);
                 break;
-            default:
-//                validationSymbol(symbol);
-                break;
         }
         return result;
     }
@@ -50,14 +47,4 @@ public class Calculator {
 
         System.out.println(a + " " + symbol + " " + b + " = " + calculator(a, b, symbol));
     }
-//    static String validationNumber(int a){
-//        if (a = )
-//    }
-
-//    static void validationSymbol(String symbol){
-//        if (symbol != "+" || symbol == "-" || symbol == "*" || symbol == "/")
-//            break;
-//        else
-//            System.out.print("Выберете опирацию (+, -, *, /): ");
-//    }
 }

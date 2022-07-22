@@ -8,20 +8,20 @@ public class ArraySorting {
         int n = sc.nextInt();
         int[] arr = arrayRandom(n);
         System.out.println("Сгенерированый масив: " + Arrays.toString(arr));
-        System.out.println("Выберете тип сортировки: \n 1 - Bubble Sort \n 2 - Selection Sort" );
-        int type = sc.nextInt();
-        System.out.println(sortSelection(n, arr, type));
+        System.out.print("Выберете тип сортировки(Bubble, Selection): ");
+        String type = sc.next();
+        System.out.println("2е самое большое число масива - " + sortSelection(arr, type));
     }
 
     static int[] arrayRandom(int n) {
         int[] arr = new int[n];
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = (int) (Math.random()* 10);
+            arr[i] = (int) (Math.random()* 100);
         }
         return arr;
     }
 
-    static int bubbleSort(int[] arr, int n) {
+    static int bubbleSort(int[] arr) {
         boolean status = true;
         int tmp;
         while (status) {
@@ -36,35 +36,32 @@ public class ArraySorting {
             }
         }
         System.out.println("Отсортерованый масив Bubble Sort: " + Arrays.toString(arr));
-        int result = arr[n-2];
-        return result;
+        return arr[arr.length-2];
     }
 
-    static int selectionSort(int[] arr, int n) {
+    static int selectionSort(int[] arr) {
         int tmp;
         for (int i = 0; i < arr.length-1; i++) {
             int min = i;
-            for (int j = i+1; j < arr.length; j++) {
+            for (int j = i+1; j < arr.length; j++)
                 if (arr[j] < arr[min])
                     min = j;
                     tmp = arr[min];
                     arr[min] = arr[i];
                     arr[i] = tmp;
-            }
         }
         System.out.println("Отсортерованый масив Selection Sort: " + Arrays.toString(arr));
-        int result = arr[n-2];
-        return result;
+        return arr[arr.length-2];
     }
 
-    static int sortSelection(int n, int[] arr, int type) {
+    static int sortSelection(int[] arr, String type) {
         int result = 0;
         switch (type) {
-            case 1:
-                result = bubbleSort(arr, n);
+            case "Bubble":
+                result = bubbleSort(arr);
                 break;
-            case 2:
-                result = selectionSort(arr, n);
+            case "Selection":
+                result = selectionSort(arr);
                 break;
             default:
                 System.out.println("Ошибка");

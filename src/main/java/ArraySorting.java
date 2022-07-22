@@ -24,10 +24,9 @@ public class ArraySorting {
     static int bubbleSort(int[] arr) {
         boolean status = true;
         int tmp;
-        int i = 0;
         while (status) {
             status = false;
-            for (i = 0; i < arr.length-1; i++) {
+            for (int i = 0; i < arr.length-1; i++) {
                 if (arr[i] > arr[i+1]){
                     tmp = arr[i];
                     arr[i] = arr[i+1];
@@ -37,13 +36,12 @@ public class ArraySorting {
             }
         }
         System.out.println("Отсортерованый масив Bubble Sort: " + Arrays.toString(arr));
-        return arr[i-1];
+        return arr[arr.length-2];
     }
 
     static int selectionSort(int[] arr) {
         int tmp;
-        int i = 0;
-        for (i = 0; i < arr.length-1; i++) {
+        for (int i = 0; i < arr.length-1; i++) {
             int min = i;
             for (int j = i+1; j < arr.length; j++)
                 if (arr[j] < arr[min])
@@ -53,7 +51,7 @@ public class ArraySorting {
                     arr[i] = tmp;
         }
         System.out.println("Отсортерованый масив Selection Sort: " + Arrays.toString(arr));
-        return arr[i-1];
+        return arr[arr.length-2];
     }
 
     static int sortSelection(int[] arr, String type) {

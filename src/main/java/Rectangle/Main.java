@@ -10,9 +10,7 @@ public class Main {
         System.out.print("Введите число 2: ");
         double b = sc.nextDouble();
 
-        Rectangle result = new Rectangle ();
-        result.setSide1(a);
-        result.setSide2(b);
+        Rectangle Rectangle = new Rectangle(a, b);
 
         System.out.println("Площадь прямоугольника = " + Rectangle.areaCalculator());
         System.out.println("Периметр прямоугольника = " + Rectangle.perimeterCalculator());

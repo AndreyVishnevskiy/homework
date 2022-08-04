@@ -2,7 +2,7 @@ package Address;
 
 public class Main {
     public static void main(String[] args) {
-        Address myAddress = new Address(25000, "Ukraine", "Kropyvnytskyi", "Vokzalna", "20 к.2", 44);
+        Address myAddress = new Address("Ukraine");
             int myAddressIndex = myAddress.getIndex();
             String myAddressCountry = myAddress.getCountry();
             String myAddressCity = myAddress.getCity();
@@ -12,22 +12,12 @@ public class Main {
 
         System.out.println("Мой адресс: " + myAddressIndex + " " + myAddressCountry + " " + myAddressCity + " " + myAddressStreet + " " + myAddressHouse + " " + myAddressApartment);
 
-        myAddress.setIndex(20200);
-        myAddress.setCountry("Ukraine");
+        myAddress.setIndex(25200);
         myAddress.setCity("Kyiv");
-        myAddress.setStreet("Yaroslavska");
-        myAddress.setHouse("58");
-        myAddress.setApartment(707);
+        myAddress.setStreet("Obolon");
+        myAddress.setHouse("12");
+        myAddress.setApartment(102);
 
-        System.out.println("Новый адресс: " + myAddress.getIndex() + " " + myAddress.getCountry() + " " + myAddress.getCity() + " " + myAddress.getStreet() + " " + myAddress.getHouse() + " " + myAddress.getApartment());
-
-        Address myAddress2 = new Address("Ukraine");
-        myAddress2.setIndex(25200);
-        myAddress2.setCity("Kyiv");
-        myAddress2.setStreet("Obolon");
-        myAddress2.setHouse("12");
-        myAddress2.setApartment(102);
-
-        System.out.println("Второй адресс: " + myAddress2);
+        System.out.println("Второй адресс: " + myAddress);
     }
 }

@@ -8,14 +8,6 @@ public class Address {
     private String house;
     private int apartment;
 
-    Address(int index, String country, String city, String street, String house, int apartment){
-        this.index = index;
-        this.country = country;
-        this.city = city;
-        this.street = street;
-        this.house = house;
-        this.apartment = apartment;
-    }
     Address(String country){
         this.country = country;
     }

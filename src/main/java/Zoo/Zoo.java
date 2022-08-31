@@ -22,6 +22,7 @@ public class Zoo {
                 zoo.set(zoo.indexOf(element), element + name);
             }
         });
+
 //        for (int i = 0; i < zoo.size(); i++) {
 //            if (zoo.get(i).equals(animal)){
 //                zoo.set(i, zoo.get(i) + name);

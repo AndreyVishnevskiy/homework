@@ -1,4 +1,4 @@
-package ClassRoom;
+package classroomtest;
 
 public class ExcelentPupil extends Pupil{
     ExcelentPupil(String name){

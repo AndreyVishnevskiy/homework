@@ -1,4 +1,4 @@
-package ClassRoom;
+package classroomtest;
 
 public class BadPupil extends Pupil{
     BadPupil(String name){

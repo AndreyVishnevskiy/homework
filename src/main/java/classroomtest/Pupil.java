@@ -1,4 +1,4 @@
-package ClassRoom;
+package classroomtest;
 
 abstract public class Pupil {
     public String name;

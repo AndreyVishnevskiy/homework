@@ -12,4 +12,9 @@ public class DocumentWorker {
     void saveDocument(){
         System.out.println("Сохранение документа доступно в версии Про");
     };
+
+    @Override
+    public String toString() {
+        return "Вам доступна базовая версия!";
+    }
 }

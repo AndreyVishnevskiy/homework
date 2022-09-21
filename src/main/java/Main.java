@@ -27,6 +27,15 @@ public class Main {
         System.out.println(set2);
         System.out.println(set3);
 
+        Map<Integer, String> hashMap = new HashMap<>();
+        hashMap.put(1, "Колбоса");
+        hashMap.put(2, "Сосиска");
+        hashMap.put(3, "Морковка");
+
+        System.out.println(hashMap);
+        System.out.println(hashMap.get(1));
+        System.out.println(hashMap.keySet() + " " + hashMap.values());
+
         List <String> test = list.stream()
                 .filter(element -> element.contains("т"))
                 .collect(Collectors.toList());

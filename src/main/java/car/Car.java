@@ -1,4 +1,4 @@
-package Car;
+package car;
 
 public class Car {
     private int year;
@@ -6,21 +6,21 @@ public class Car {
     private int weight;
     private String color;
 
-    Car(){}
+    public Car(){}
 
-    Car(int year){
+    public Car(int year){
         this.year = year;
     }
-    Car(int year, String color){
+    public Car(int year, String color){
         this.year = year;
         this.color = color;
     }
-    Car(int year, double speed, String color){
+    public Car(int year, double speed, String color){
         this.year = year;
         this.speed = speed;
         this.color = color;
     }
-    Car(int year, double speed, int weight, String color){
+    public Car(int year, double speed, int weight, String color){
         this.year = year;
         this.speed = speed;
         this.weight = weight;

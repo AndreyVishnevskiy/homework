@@ -1,6 +1,6 @@
-package Car;
+package car;
 
-public class Main {
+public class CarMain {
     public static void main(String[] args) {
         Car Ford = new Car();
         Car Toyota = new Car(2015);

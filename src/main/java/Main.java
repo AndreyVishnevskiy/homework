@@ -3,6 +3,7 @@ import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
+
         List<String> list = new ArrayList<>();
         list.add("Первый");
         list.add("Первый");
@@ -30,6 +31,6 @@ public class Main {
         List <String> test = list.stream()
                 .filter(element -> element.contains("т"))
                 .collect(Collectors.toList());
-        System.out.println(test);
+        System.out.println("stream: " + test);
     }
 }

@@ -14,7 +14,7 @@ public class Main {
         System.out.println("Количество пробелов: " + sortText.getSpaceCount());
         System.out.println("Вывести всего 12 слов: " + sortText.get12Words(12));
         System.out.println("Вывести 12 отсартированых слов: " + sortText.get12SortedWords(12));
-        System.out.println("Любое слово: " + sortText.getAnyWord("Microsystems"));
+        System.out.println("Любое слово: " + sortText.getAnyWord());
         System.out.println("Первое слово: " + sortText.getFirstWord());
         System.out.println("Последнее слово: " + sortText.getLastWord());
         System.out.println("Все цифры: " + sortText.getAllNumbers());

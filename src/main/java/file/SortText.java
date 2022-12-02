@@ -16,22 +16,12 @@ public class SortText {
 
     public SortText(String text) {
         this.text = text;
-        this.words = getListWords();
-        this.numbers = getListNumbers();
+        this.words = getList("[a-zA-z]{2,}");
+        this.numbers = getList("\\d+");
     }
 
-    private List<String > getListWords(){
-        Pattern pattern = Pattern.compile("[a-zA-z]{2,}");
-        Matcher matcher = pattern.matcher(text);
-        List<String> words = new ArrayList<>();
-        while(matcher.find()){
-            words.add(matcher.group());
-        }
-        return words;
-    }
-
-    private List<String > getListNumbers(){
-        Pattern pattern = Pattern.compile("\\d+");
+    private List<String > getList(String regex){
+        Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(text);
         List<String> words = new ArrayList<>();
         while(matcher.find()){
@@ -51,9 +41,7 @@ public class SortText {
     }
 
     public long getCountWordsWithC(String uppercase, String lowercase){
-        return words.stream()
-                .filter(item -> item.startsWith(uppercase) || item.startsWith(lowercase))
-                .count();
+        return getWordsWithC(uppercase, lowercase).size();
     }
 
     public long getSpaceCount(){
@@ -75,10 +63,9 @@ public class SortText {
                 .collect(Collectors.toList());
     }
 
-    public String getAnyWord(String word) {
+    public String getAnyWord() {
         return words.stream()
-                .filter(item -> item.equals(word))
-                .findFirst()
+                .findAny()
                 .orElseThrow();
     }
 

@@ -16,18 +16,18 @@ public class SortText {
 
     public SortText(String text) {
         this.text = text;
-        this.words = getList("[a-zA-z]{2,}");
-        this.numbers = getList("\\d+");
+        this.words = splitter("[a-zA-z]{2,}");
+        this.numbers = splitter("\\d+");
     }
 
-    private List<String > getList(String regex){
+    private List<String > splitter(String regex){
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(text);
-        List<String> words = new ArrayList<>();
+        List<String> element = new ArrayList<>();
         while(matcher.find()){
-            words.add(matcher.group());
+            element.add(matcher.group());
         }
-        return words;
+        return element;
     }
 
     public long getWordCount(){

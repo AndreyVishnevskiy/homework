@@ -39,6 +39,6 @@ public class Main {
         List <String> test = list.stream()
                 .filter(element -> element.contains("т"))
                 .collect(Collectors.toList());
-        System.out.println(test);
+        System.out.println("stream: " + test);
     }
 }

@@ -1,0 +1,8 @@
+target
+.idea/
+*.iml
+builds
+.allure
+allure-results
+src/main/resources/local.properties
+build

@@ -1,10 +1,5 @@
-import autotest.WikipediaPage;
-
 import java.util.*;
 import java.util.stream.Collectors;
-import java.time.YearMonth;
-
-
 
 public class Main {
     public static void main(String[] args) {
@@ -35,13 +30,6 @@ public class Main {
         List <String> test = list.stream()
                 .filter(element -> element.contains("т"))
                 .collect(Collectors.toList());
-        System.out.println(test);
-
-        Calendar cal = Calendar.getInstance();
-        System.out.println("The Current Year is:" + cal.get(Calendar.YEAR));
-
-        int year = YearMonth.now().getYear();
-        System.out.println("Current year: "+ year);
-
+        System.out.println("stream: " + test);
     }
 }
